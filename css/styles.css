@@ -1,0 +1,66 @@
+.container {
+  max-width: 1000px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.bet {
+  width: 3em;
+  height: 3em;
+  color: white;
+  border-color: aqua;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.bet1,
+.bet3,
+.bet5,
+.bet7,
+.bet9,
+.bet12,
+.bet14,
+.bet16,
+.bet18,
+.bet19,
+.bet21,
+.bet23,
+.bet25,
+.bet27,
+.bet30,
+.bet32,
+.bet34,
+.bet36 {
+  background-color: red;
+}
+
+.bet2,
+.bet4,
+.bet6,
+.bet8,
+.bet10,
+.bet11,
+.bet13,
+.bet15,
+.bet17,
+.bet20,
+.bet22,
+.bet24,
+.bet26,
+.bet28,
+.bet29,
+.bet31,
+.bet33,
+.bet35 {
+  background-color: black;
+}
+
+.bet0,
+.bet00 {
+  background-color: greenyellow;
+  width:;
+}
