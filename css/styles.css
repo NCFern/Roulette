@@ -1,17 +1,19 @@
 .container {
   max-width: 1000px;
+  background-color: pink;
 }
 
 ul {
   list-style-type: none;
   display: flex;
+  margin: none;
 }
 
 .bet {
+  border-color: white;
   width: 3em;
   height: 3em;
   color: white;
-  border-color: aqua;
   font-size: 2em;
   text-align: center;
   padding-top: 30px;
@@ -61,6 +63,6 @@ ul {
 
 .bet0,
 .bet00 {
-  background-color: greenyellow;
+  background-color: green;
   width:;
 }
