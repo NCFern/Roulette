@@ -1,22 +1,26 @@
 .container {
   max-width: 1000px;
-  background-color: pink;
 }
 
-ul {
-  list-style-type: none;
+.table-one {
   display: flex;
-  margin: none;
+  padding-top: 20px;
 }
 
 .bet {
-  border-color: white;
+  border-left: 4px solid white;
+  border-top: 4px solid white;
   width: 3em;
   height: 3em;
   color: white;
   font-size: 2em;
   text-align: center;
   padding-top: 30px;
+  transform: rotate(-90deg);
+}
+
+.bet:hover {
+  cursor: pointer;
 }
 
 .bet1,
@@ -61,8 +65,36 @@ ul {
   background-color: black;
 }
 
-.bet0,
-.bet00 {
-  background-color: green;
-  width:;
+.bet00,
+.bet3,
+.bet6,
+.bet9,
+.bet12,
+.bet15,
+.bet18,
+.bet21,
+.bet24,
+.bet27,
+.bet30,
+.bet33,
+.bet36,
+.third-1 {
+  border-right: 4px solid white;
+}
+
+.third-1,
+.third-2,
+.third-3 {
+  border-bottom: 4px solid white;
+}
+
+.bet-edge {
+  display: flex;
+  border: 4px solid white;
+  width: 7em;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
 }
