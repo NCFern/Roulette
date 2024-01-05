@@ -100,7 +100,7 @@
   padding-left: 113px;
 }
 
-.bet-edge {
+.bet-dozen {
   border: 4px solid white;
   width: 12.06em;
   height: 3em;
@@ -108,4 +108,28 @@
   font-size: 2em;
   text-align: center;
   padding-top: 30px;
+}
+
+.table-three {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 113px;
+}
+
+.bet-half {
+  border: 4px solid white;
+  width: 6.03em;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.half-red {
+  background-color: red;
+}
+
+.half-black {
+  background-color: black;
 }
