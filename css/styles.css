@@ -4,6 +4,8 @@
 
 .table-one {
   display: flex;
+
+  /* grid-template-columns: 33% 33% 33%; */
   padding-top: 20px;
   padding-left: 20px;
 }
@@ -24,50 +26,11 @@
   cursor: pointer;
 }
 
-/* .bet00, .bet0 {
-  width: 4em;
-  height: 3em;
-} */
-
-.bet1,
-.bet3,
-.bet5,
-.bet7,
-.bet9,
-.bet12,
-.bet14,
-.bet16,
-.bet18,
-.bet19,
-.bet21,
-.bet23,
-.bet25,
-.bet27,
-.bet30,
-.bet32,
-.bet34,
-.bet36 {
+.bg-red {
   background-color: red;
 }
 
-.bet2,
-.bet4,
-.bet6,
-.bet8,
-.bet10,
-.bet11,
-.bet13,
-.bet15,
-.bet17,
-.bet20,
-.bet22,
-.bet24,
-.bet26,
-.bet28,
-.bet29,
-.bet31,
-.bet33,
-.bet35 {
+.bg-black {
   background-color: black;
 }
 
@@ -110,6 +73,10 @@
   padding-top: 30px;
 }
 
+.bet-dozen:hover {
+  cursor: pointer;
+}
+
 .table-three {
   display: flex;
   justify-content: flex-start;
@@ -124,6 +91,10 @@
   font-size: 2em;
   text-align: center;
   padding-top: 30px;
+}
+
+.bet-half:hover {
+  cursor: pointer;
 }
 
 .half-red {
