@@ -3,11 +3,18 @@
 }
 
 .table-one {
-  display: flex;
+  display: grid;
 
-  /* grid-template-columns: 33% 33% 33%; */
-  padding-top: 20px;
-  padding-left: 20px;
+  --col: 5rem;
+  --row: 5rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(3, var(--col));
+  grid-template-rows: repeat(13, var(--row));
+  grid-gap: var(--gap);
+  transform: rotate(-90deg);
+  padding-left: 70em;
+  padding-top: 20em;
 }
 
 .bet {
@@ -19,7 +26,7 @@
   font-size: 2em;
   text-align: center;
   padding-top: 30px;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 .bet:hover {
@@ -34,33 +41,23 @@
   background-color: black;
 }
 
-.bet00,
-.bet3,
-.bet6,
-.bet9,
-.bet12,
-.bet15,
-.bet18,
-.bet21,
-.bet24,
-.bet27,
-.bet30,
-.bet33,
-.bet36,
-.third-1 {
-  border-right: 4px solid white;
-}
-
 .third-1,
 .third-2,
 .third-3 {
-  border-bottom: 4px solid white;
+  border-right: 4px solid white;
 }
 
 .table-two {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 113px;
+  display: grid;
+
+  --col: 23rem;
+  --row: 1rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(3, var(--col));
+  grid-template-rows: repeat(1, var(--row));
+  grid-gap: var(--gap);
+  padding-left: 28em;
 }
 
 .bet-dozen {
@@ -78,9 +75,16 @@
 }
 
 .table-three {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 113px;
+  display: grid;
+
+  --col: 11rem;
+  --row: 1rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(6, var(--col));
+  grid-template-rows: repeat(1, var(--row));
+  grid-gap: var(--gap);
+  padding-left: 28em;
 }
 
 .bet-half {
