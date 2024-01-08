@@ -1,3 +1,3 @@
 # Roulette
 
-A dynamic HTML, CSS, and JavaScript solo project.
+A dynamic roulette simulation game constructed using HTML, CSS, and JavaScript. 
