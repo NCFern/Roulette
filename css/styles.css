@@ -1,0 +1,112 @@
+.container {
+  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-one {
+  display: grid;
+
+  --col: 5rem;
+  --row: 5rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(3, var(--col));
+  grid-template-rows: repeat(13, var(--row));
+  grid-gap: var(--gap);
+  transform: rotate(-90deg);
+  padding-left: 70em;
+  padding-top: 1em;
+}
+
+.bet {
+  border-left: 4px solid white;
+  border-top: 4px solid white;
+  width: 3em;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
+  transform: rotate(90deg);
+}
+
+.bet:hover {
+  cursor: pointer;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.third-1,
+.third-2,
+.third-3 {
+  border-right: 4px solid white;
+}
+
+.table-two {
+  display: grid;
+
+  --col: 23rem;
+  --row: 1rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(3, var(--col));
+  grid-template-rows: repeat(1, var(--row));
+  grid-gap: var(--gap);
+  padding-left: 28em;
+}
+
+.bet-dozen {
+  border: 4px solid white;
+  width: 12.06em;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.bet-dozen:hover {
+  cursor: pointer;
+}
+
+.table-three {
+  display: grid;
+
+  --col: 11rem;
+  --row: 1rem;
+  --gap: 1rem;
+
+  grid-template-columns: repeat(6, var(--col));
+  grid-template-rows: repeat(1, var(--row));
+  grid-gap: var(--gap);
+  padding-left: 28em;
+}
+
+.bet-half {
+  border: 4px solid white;
+  width: 6.03em;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.bet-half:hover {
+  cursor: pointer;
+}
+
+.half-red {
+  background-color: red;
+}
+
+.half-black {
+  background-color: black;
+}
