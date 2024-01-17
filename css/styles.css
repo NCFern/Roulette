@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 37em;
+  grid-template-columns: repeat(4, 40em);
 }
 
 .table-one {
@@ -72,7 +72,7 @@
 }
 
 .table-three {
-  /* display: grid;
+  display: grid;
 
   --col: 11rem;
   --row: 1rem;
@@ -80,8 +80,8 @@
 
   grid-template-columns: repeat(6, var(--col));
   grid-template-rows: repeat(1, var(--row));
-  grid-gap: var(--gap); */
-  padding-left: 28em;
+  grid-gap: var(--gap);
+  transform: rotate(-90deg);
 }
 
 .bet-half {
