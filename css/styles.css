@@ -1,6 +1,11 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 40em);
+  padding-top: 2rem;
+
+  /* padding-left: 15rem;
+grid-template-columns: 390px;
+  grid-template-areas:
+  "content sidebar" */
 }
 
 .table-one {
@@ -13,6 +18,9 @@
   grid-template-columns: repeat(3, var(--col));
   grid-template-rows: repeat(13, var(--row));
   grid-gap: var(--gap);
+
+  /* grid-area: content; */
+  grid-column: 1/-1;
 }
 
 .bet {
@@ -41,7 +49,7 @@
 .third-1,
 .third-2,
 .third-3 {
-  border-right: 4px solid white;
+  border-bottom: 4px solid white;
 }
 
 .table-two {
@@ -55,6 +63,9 @@
   grid-template-rows: repeat(1, var(--row));
   grid-gap: var(--gap);
   transform: rotate(-90deg);
+
+  /* grid-area: sidebar; */
+  grid-column: -1/3;
 }
 
 .bet-dozen {
@@ -82,6 +93,7 @@
   grid-template-rows: repeat(1, var(--row));
   grid-gap: var(--gap);
   transform: rotate(-90deg);
+  grid-area: sidebar;
 }
 
 .bet-half {
