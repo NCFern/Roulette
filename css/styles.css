@@ -10,17 +10,12 @@ grid-template-columns: 390px;
 
 .table-one {
   display: grid;
-
-  --col: 5rem;
-  --row: 5rem;
-  --gap: 1rem;
-
-  grid-template-columns: repeat(3, var(--col));
-  grid-template-rows: repeat(13, var(--row));
-  grid-gap: var(--gap);
+  grid-template-columns: repeat(3, 5rem);
+  grid-template-rows: repeat(13, 5rem);
+  grid-gap: 1rem;
 
   /* grid-area: content; */
-  grid-column: 1/-1;
+  grid-column: 1/2;
 }
 
 .bet {
@@ -54,18 +49,14 @@ grid-template-columns: 390px;
 
 .table-two {
   display: grid;
+  grid-template-columns: repeat(3, 23rem);
+  grid-template-rows: repeat(1, 1rem);
+  grid-gap: 1rem;
 
-  --col: 23rem;
-  --row: 1rem;
-  --gap: 1rem;
-
-  grid-template-columns: repeat(3, var(--col));
-  grid-template-rows: repeat(1, var(--row));
-  grid-gap: var(--gap);
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
 
   /* grid-area: sidebar; */
-  grid-column: -1/3;
+  grid-column: 2/3;
 }
 
 .bet-dozen {
@@ -84,16 +75,14 @@ grid-template-columns: 390px;
 
 .table-three {
   display: grid;
+  grid-template-columns: repeat(6, 11rem);
+  grid-template-rows: repeat(1, 1rem);
+  grid-gap: 1rem;
 
-  --col: 11rem;
-  --row: 1rem;
-  --gap: 1rem;
+  /* transform: rotate(-90deg); */
 
-  grid-template-columns: repeat(6, var(--col));
-  grid-template-rows: repeat(1, var(--row));
-  grid-gap: var(--gap);
-  transform: rotate(-90deg);
-  grid-area: sidebar;
+  /* grid-area: sidebar; */
+  grid-column: 3/4;
 }
 
 .bet-half {
