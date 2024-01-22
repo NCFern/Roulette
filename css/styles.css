@@ -1,11 +1,7 @@
 .container {
   display: grid;
   padding-top: 2rem;
-
-  /* padding-left: 15rem;
-grid-template-columns: 390px;
-  grid-template-areas:
-  "content sidebar" */
+  grid-template-columns: 50%, 25%, 25%;
 }
 
 .table-one {
@@ -13,8 +9,6 @@ grid-template-columns: 390px;
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(13, 5rem);
   grid-gap: 1rem;
-
-  /* grid-area: content; */
   grid-column: 1/2;
 }
 
@@ -52,10 +46,7 @@ grid-template-columns: 390px;
   grid-template-columns: repeat(3, 23rem);
   grid-template-rows: repeat(1, 1rem);
   grid-gap: 1rem;
-
-  /* transform: rotate(-90deg); */
-
-  /* grid-area: sidebar; */
+  transform: rotate(-90deg);
   grid-column: 2/3;
 }
 
@@ -78,10 +69,7 @@ grid-template-columns: 390px;
   grid-template-columns: repeat(6, 11rem);
   grid-template-rows: repeat(1, 1rem);
   grid-gap: 1rem;
-
-  /* transform: rotate(-90deg); */
-
-  /* grid-area: sidebar; */
+  transform: rotate(-90deg);
   grid-column: 3/4;
 }
 
