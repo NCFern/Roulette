@@ -2,7 +2,6 @@
   display: grid;
   padding-top: 2rem;
   grid-template-columns: 50% 25% 25%;
-  width: 585px;
 }
 
 .table-one {
@@ -10,7 +9,10 @@
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(13, 5rem);
   grid-gap: 1rem;
-  grid-column: 1/2;
+
+  /* padding-left: 500px;
+  padding-top: 1000px;
+  transform: rotate(-90deg); */
 }
 
 .bet {
@@ -43,11 +45,11 @@
 }
 
 .table-two {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-
-  /* transform: rotate(-90deg); */
+  align-items: center;
+  padding-bottom: 180px;
 }
 
 .bet-dozen {
@@ -65,13 +67,10 @@
 }
 
 .table-three {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-gap: 1rem;
-
-  /* transform: rotate(-90deg); */
-  grid-column: 3/4;
+  display: flex;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
 }
 
 .bet-half {
