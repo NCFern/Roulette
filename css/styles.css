@@ -1,7 +1,9 @@
 .container {
   display: grid;
   padding-top: 2rem;
-  grid-template-columns: 50% 25% 25%;
+
+  /* grid-template-columns: 33% 33% 33%; */
+  grid-template-columns: 15% 5% 0%;
 }
 
 .table-one {
@@ -9,6 +11,7 @@
   grid-template-columns: repeat(3, 5rem);
   grid-template-rows: repeat(13, 5rem);
   grid-gap: 1rem;
+  width: 100px;
 
   /* padding-left: 500px;
   padding-top: 1000px;
@@ -45,21 +48,26 @@
 }
 
 .table-two {
-  display: flex;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  padding-bottom: 180px;
+
+  /* padding-bottom: 180px; */
 }
 
 .bet-dozen {
   border: 4px solid white;
-  width: 12.06em;
-  height: 3em;
+
+  /* width: 12.06em;
+  height: 3em; */
+  width: 3em;
+  height: 12.06em;
   color: white;
   font-size: 2em;
   text-align: center;
-  padding-top: 30px;
+
+  /* padding-top: 30px; */
 }
 
 .bet-dozen:hover {
@@ -67,20 +75,21 @@
 }
 
 .table-three {
-  display: flex;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   align-items: center;
 }
 
 .bet-half {
   border: 4px solid white;
-  width: 6.03em;
-  height: 3em;
+  width: 3em;
+  height: 6.03em;
   color: white;
   font-size: 2em;
   text-align: center;
-  padding-top: 30px;
+
+  /* padding-top: 30px; */
 }
 
 .bet-half:hover {
