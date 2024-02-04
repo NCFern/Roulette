@@ -1,6 +1,7 @@
 .container {
   display: grid;
-  padding-top: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
   grid-template-columns: 1fr 1fr 1fr;
   width: 0;
 }
@@ -8,7 +9,7 @@
 .table-one {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(13, 100px);
+  grid-template-rows: repeat(14, 100px);
 }
 
 .bet {
@@ -34,25 +35,34 @@
   background-color: black;
 }
 
-.third-1,
-.third-2,
-.third-3 {
+.border-right {
+  border-right: 4px solid white;
+}
+
+.column-third {
   border-bottom: 4px solid white;
 }
 
 .table-two {
   display: grid;
   grid-template-columns: repeat(1, 100px);
-  grid-template-rows: repeat(3, 380px);
+  grid-template-rows: repeat(3, 400px);
   height: 100%;
+  padding-top: 70px;
 }
 
 .bet-dozen {
-  border: 4px solid white;
-  height: 12.06em;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  height: 400px;
   color: white;
   font-size: 2em;
   text-align: center;
+}
+
+.sidebet-bottom {
+  border-bottom: 4px solid white;
 }
 
 .bet-dozen:hover {
@@ -62,14 +72,15 @@
 .table-three {
   display: grid;
   grid-template-columns: repeat(1, 100px);
-  grid-template-rows: repeat(6, 190px);
+  grid-template-rows: repeat(6, 200px);
   height: 100%;
+  padding-top: 70px;
 }
 
 .bet-half {
-  border: 4px solid white;
-  width: 3em;
-  height: 6.03em;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  height: 200px;
   color: white;
   font-size: 2em;
   text-align: center;
