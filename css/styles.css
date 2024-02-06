@@ -1,0 +1,101 @@
+.container {
+  display: grid;
+  padding-top: 50px;
+  padding-left: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 0;
+}
+
+.table-one {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(14, 100px);
+}
+
+.bet {
+  border-left: 4px solid white;
+  border-top: 4px solid white;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bet:hover {
+  cursor: pointer;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.border-right {
+  border-right: 4px solid white;
+}
+
+.column-third {
+  border-bottom: 4px solid white;
+}
+
+.table-two {
+  display: grid;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: repeat(3, 400px);
+  height: 100%;
+  padding-top: 70px;
+}
+
+.bet-dozen {
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  height: 400px;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 180px;
+}
+
+.sidebet-bottom {
+  border-bottom: 4px solid white;
+}
+
+.bet-dozen:hover {
+  cursor: pointer;
+}
+
+.table-three {
+  display: grid;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: repeat(6, 200px);
+  height: 100%;
+  padding-top: 70px;
+}
+
+.bet-half {
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  height: 200px;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.bet-half:hover {
+  cursor: pointer;
+}
+
+.half-red {
+  background-color: red;
+}
+
+.half-black {
+  background-color: black;
+}
