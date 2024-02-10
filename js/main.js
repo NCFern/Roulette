@@ -1,4 +1,4 @@
-var betting = [
+var betTable = [
   {
     number: '0',
     color: 'green',
@@ -152,6 +152,32 @@ var betting = [
     color: 'red',
   },
 ];
+
+function renderBetTable(number, color) {
+  var $betColumn = document.createElement('div');
+  $betColumn.setAttribute('class', 'column-third');
+
+  var $betDisplay = document.createElement('div');
+  $betDisplay.setAttribute('class', '');
+
+  var $betNumber = document.createElement('h2');
+  $betNumber.textContent = betTable.number;
+
+  var $betColor = document.createElement('h2');
+  $betColor.textContent = betTable.color;
+
+  $betDisplay.appendChild($betNumber);
+  $betDisplay.appendChild($betColor);
+  $betColumn.appendChild($betDisplay);
+
+  return $betColumn;
+}
+
+// var $betRow = document.querySelector('.row');
+// for (var i = 0; i < betTable.length; i++) {
+//   var $betDisplay = renderBetTable(betTable[i]);
+//   $betRow.appendChild($betDisplay)
+// }
 
 // click handler on table, get value of html
 // when clicked, get random number to compare
