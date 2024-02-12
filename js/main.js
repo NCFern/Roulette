@@ -153,7 +153,7 @@ var betTable = [
   },
 ];
 
-function renderBetTable(number, color) {
+function renderBetTable(randomBet) {
   var $betColumn = document.createElement('div');
   $betColumn.setAttribute('class', 'column-third');
 
@@ -161,10 +161,10 @@ function renderBetTable(number, color) {
   $betDisplay.setAttribute('class', '');
 
   var $betNumber = document.createElement('h2');
-  $betNumber.textContent = betTable.number;
+  $betNumber.textContent = randomBet.number;
 
   var $betColor = document.createElement('h2');
-  $betColor.textContent = betTable.color;
+  $betColor.textContent = randomBet.color;
 
   $betDisplay.appendChild($betNumber);
   $betDisplay.appendChild($betColor);
@@ -173,10 +173,19 @@ function renderBetTable(number, color) {
   return $betColumn;
 }
 
-// var $betRow = document.querySelector('.row');
-// for (var i = 0; i < betTable.length; i++) {
-//   var $betDisplay = renderBetTable(betTable[i]);
-//   $betRow.appendChild($betDisplay)
+var $betRow = document.querySelector('.row');
+for (var i = 0; i < 1; i++) {
+  var $betDisplay = renderBetTable(betTable[i]);
+  $betRow.appendChild($betDisplay);
+}
+
+// var $button = document.querySelector('.bet-button');
+// $button.addEventListener('click', handleClick);
+
+// function handleClick(event) {
+//   console.log('button clicked');
+//   console.log(event);
+//   console.log(event.target);
 // }
 
 // click handler on table, get value of html
