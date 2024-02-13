@@ -154,11 +154,8 @@ var betTable = [
 ];
 
 function renderBetTable(randomBet) {
-  var $betColumn = document.createElement('div');
-  $betColumn.setAttribute('class', 'column-third');
-
   var $betDisplay = document.createElement('div');
-  $betDisplay.setAttribute('class', '');
+  $betDisplay.setAttribute('class', 'betDisplay');
 
   var $betNumber = document.createElement('h2');
   $betNumber.textContent = randomBet.number;
@@ -168,25 +165,18 @@ function renderBetTable(randomBet) {
 
   $betDisplay.appendChild($betNumber);
   $betDisplay.appendChild($betColor);
-  $betColumn.appendChild($betDisplay);
 
-  return $betColumn;
+  return $betDisplay;
 }
 
-var $betRow = document.querySelector('.row');
+var $betDisplayNumber = document.querySelector('.displayNumber');
 for (var i = 0; i < 1; i++) {
   var $betDisplay = renderBetTable(betTable[i]);
-  $betRow.appendChild($betDisplay);
+  $betDisplayNumber.appendChild($betDisplay);
 }
 
-// var $button = document.querySelector('.bet-button');
-// $button.addEventListener('click', handleClick);
-
-// function handleClick(event) {
-//   console.log('button clicked');
-//   console.log(event);
-//   console.log(event.target);
-// }
+var $button = document.querySelector('.bet-button');
+$button.addEventListener('click', handleClick);
 
 // click handler on table, get value of html
 // when clicked, get random number to compare
