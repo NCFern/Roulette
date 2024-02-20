@@ -153,37 +153,38 @@ var betTable = [
   },
 ];
 
-function renderBetTable(randomBet) {
-  var $betDisplay = document.createElement('div');
-  $betDisplay.setAttribute('class', 'betDisplay');
+var clickedBet;
 
-  var $betNumber = document.createElement('h2');
-  $betNumber.textContent = randomBet.number;
+var $betDisplay = document.createElement('div');
+$betDisplay.setAttribute('class', 'betDisplay');
 
-  var $betColor = document.createElement('h2');
-  $betColor.textContent = randomBet.color;
+var $betNumber = document.createElement('h2');
+$betNumber.textContent = 0;
 
-  $betDisplay.appendChild($betNumber);
-  $betDisplay.appendChild($betColor);
+var $betColor = document.createElement('h2');
+$betColor.textContent = 'green';
 
-  return $betDisplay;
-}
+$betDisplay.appendChild($betNumber);
+$betDisplay.appendChild($betColor);
 
 var $betDisplayNumber = document.querySelector('.displayNumber');
-for (var i = 0; i < 1; i++) {
-  var $betDisplay = renderBetTable(betTable[i]);
-  $betDisplayNumber.appendChild($betDisplay);
+
+var renderDisplay = $betDisplay;
+$betDisplayNumber.appendChild(renderDisplay);
+
+var $button = document.querySelector('#bet-button');
+$button.addEventListener('click', function () {
+  randomBet(betTable);
+});
+
+function randomBet(array) {
+  if (!clickedBet) return;
+  var results = array[Math.floor(Math.random() * array.length)];
+  $betNumber.textContent = results.number;
+  $betColor.textContent = results.color;
+  clickedBet = false;
 }
 
-var $button = document.querySelector('.bet-button');
-$button.addEventListener('click', randomBet);
-
-function randomBet(betTable) {
-  return betTable[Math.floor(Math.random() * betTable.length)];
-}
-
-console.log(randomBet);
-// click handler on table, get value of html
-// when clicked, get random number to compare
-
-// var item = items[Math.floor(Math.random() * items.length)];
+// be able to click on main board and place bet
+// compare clicked bet to results
+// console log if you win/lose
