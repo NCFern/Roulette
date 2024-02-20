@@ -176,7 +176,14 @@ for (var i = 0; i < 1; i++) {
 }
 
 var $button = document.querySelector('.bet-button');
-$button.addEventListener('click', handleClick);
+$button.addEventListener('click', randomBet);
 
+function randomBet(betTable) {
+  return betTable[Math.floor(Math.random() * betTable.length)];
+}
+
+console.log(randomBet);
 // click handler on table, get value of html
 // when clicked, get random number to compare
+
+// var item = items[Math.floor(Math.random() * items.length)];
