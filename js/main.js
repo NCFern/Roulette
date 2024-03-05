@@ -1,3 +1,5 @@
+var money = 1000;
+
 var betTable = [
   {
     number: '0',
@@ -155,36 +157,49 @@ var betTable = [
 
 var clickedBet;
 
-var $betDisplay = document.createElement('div');
-$betDisplay.setAttribute('class', 'betDisplay');
+var betDisplay = document.createElement('div');
+betDisplay.setAttribute('class', 'betDisplay');
 
-var $betNumber = document.createElement('h2');
-$betNumber.textContent = 0;
+var betNumber = document.createElement('h2');
+betNumber.textContent = 0;
 
-var $betColor = document.createElement('h2');
-$betColor.textContent = 'green';
+var betColor = document.createElement('h2');
+betColor.textContent = 'green';
 
-$betDisplay.appendChild($betNumber);
-$betDisplay.appendChild($betColor);
+betDisplay.appendChild(betNumber);
+betDisplay.appendChild(betColor);
 
-var $betDisplayNumber = document.querySelector('.displayNumber');
+var betDisplayNumber = document.querySelector('.displayNumber');
 
-var renderDisplay = $betDisplay;
-$betDisplayNumber.appendChild(renderDisplay);
+var renderDisplay = betDisplay;
+betDisplayNumber.appendChild(renderDisplay);
 
-var $button = document.querySelector('#bet-button');
-$button.addEventListener('click', function () {
+var renderMoney = document.getElementById('money');
+renderMoney.innerHTML = money;
+
+var button = document.getElementById('bet-button');
+button.addEventListener('click', function () {
   randomBet(betTable);
 });
 
 function randomBet(array) {
   if (!clickedBet) return;
   var results = array[Math.floor(Math.random() * array.length)];
-  $betNumber.textContent = results.number;
-  $betColor.textContent = results.color;
+  betNumber.textContent = results.number;
+  betColor.textContent = results.color;
+  if (clickedBet === results.color) {
+    money += 100;
+  } else {
+    money -= 100;
+  }
+  renderMoney.innerHTML = money;
   clickedBet = false;
 }
 
-// be able to click on main board and place bet
-// compare clicked bet to results
-// console log if you win/lose
+//make a click handler if red/black
+var clickBet = document.querySelectorAll('.clickBet');
+clickBet.forEach(function (element) {
+  element.addEventListener('click', function () {
+    clickedBet = element.getAttribute('data-bet');
+  });
+});

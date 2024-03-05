@@ -2,7 +2,7 @@
   display: grid;
   padding-top: 50px;
   padding-left: 50px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 0;
 }
 
@@ -94,7 +94,6 @@
 .display-box {
   display: flex;
   border: 4px solid white;
-  margin-top: 100px;
   justify-content: center;
   align-items: center;
 }
