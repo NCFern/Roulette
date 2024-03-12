@@ -187,12 +187,31 @@ function randomBet(array) {
   var results = array[Math.floor(Math.random() * array.length)];
   betNumber.textContent = results.number;
   betColor.textContent = results.color;
-  if (clickedBet === results.color) {
-    money += 100;
-  } else {
-    money -= 100;
+
+  if (clickedBet.type === 'color') {
+    if (clickedBet.value === results.color) {
+      money += 100;
+    } else {
+      money -= 100;
+    }
   }
+
+  // on left side, check what clickedbet value is
+  // if its odd or even
+  // on right side, get results.number and use modulus
+  // if its odd or even
+
+  if (clickedBet.type === 'half') {
+    var even = clickedBet.value === 'even' ? 0 : 1;
+    if (parseInt(results.number, 10) % 2 === even) {
+      money += 100;
+    } else {
+      money -= 100;
+    }
+  }
+
   renderMoney.innerHTML = money;
+
   clickedBet = false;
 }
 
@@ -200,6 +219,10 @@ function randomBet(array) {
 var clickBet = document.querySelectorAll('.clickBet');
 clickBet.forEach(function (element) {
   element.addEventListener('click', function () {
-    clickedBet = element.getAttribute('data-bet');
+    clickedBet = {
+      type: element.getAttribute('data-bet'),
+      value: element.getAttribute('data-value'),
+    };
+    console.log(clickedBet);
   });
 });
