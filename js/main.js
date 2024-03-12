@@ -196,11 +196,6 @@ function randomBet(array) {
     }
   }
 
-  // on left side, check what clickedbet value is
-  // if its odd or even
-  // on right side, get results.number and use modulus
-  // if its odd or even
-
   if (clickedBet.type === 'half') {
     var even = clickedBet.value === 'even' ? 0 : 1;
     if (parseInt(results.number, 10) % 2 === even) {
@@ -215,7 +210,6 @@ function randomBet(array) {
   clickedBet = false;
 }
 
-//make a click handler if red/black
 var clickBet = document.querySelectorAll('.clickBet');
 clickBet.forEach(function (element) {
   element.addEventListener('click', function () {
