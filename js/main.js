@@ -1,5 +1,7 @@
 var money = 1000;
 
+var moneyBet = 100;
+
 var betTable = [
   {
     number: '0',
@@ -12,6 +14,7 @@ var betTable = [
   {
     number: '1',
     color: 'red',
+    column: 'one',
   },
   {
     number: '2',
@@ -184,33 +187,55 @@ button.addEventListener('click', function () {
 
 function randomBet(array) {
   if (!clickedBet) return;
+  money -= moneyBet;
   var results = array[Math.floor(Math.random() * array.length)];
   betNumber.textContent = results.number;
   betColor.textContent = results.color;
 
   if (clickedBet.type === 'color') {
     if (clickedBet.value === results.color) {
-      money += 100;
-    } else {
-      money -= 100;
+      money += moneyBet * 2;
     }
   }
 
   if (clickedBet.type === 'divisible') {
     var even = clickedBet.value === 'even' ? 0 : 1;
     if (parseInt(results.number, 10) % 2 === even) {
-      money += 100;
-    } else {
-      money -= 100;
+      money += moneyBet * 2;
     }
   }
 
   if (clickedBet.type === 'half') {
-    var lowNum = clickedBet.value === 'lowNum' ? 0 : 1;
-    if (parseInt(results.number, 10) <= 18 === lowNum) {
-      money += 100;
-    } else {
-      money -= 100;
+    if (parseInt(results.number, 10) <= 18 && clickedBet.value === 'first') {
+      money += moneyBet * 2;
+    } else if (
+      parseInt(results.number, 10) > 18 &&
+      clickedBet.value === 'last'
+    ) {
+      money += moneyBet * 2;
+    }
+  }
+
+  if (clickedBet.type === 'single') {
+    if (parseInt(results.number, 10) === parseInt(clickedBet.value)) {
+      money += moneyBet * 36;
+    }
+  }
+
+  if (clickedBet.type === 'dozen') {
+    if (parseInt(results.number, 10) <= 12 && clickedBet.value === 'dozen1') {
+      money += moneyBet * 3;
+    } else if (
+      parseInt(results.number, 10) <= 24 &&
+      parseInt(results.number, 10) > 12 &&
+      clickedBet.value === 'dozen2'
+    ) {
+      money += moneyBet * 3;
+    } else if (
+      parseInt(results.number, 10) > 24 &&
+      clickedBet.value === 'dozen3'
+    ) {
+      money += moneyBet * 3;
     }
   }
 
