@@ -196,9 +196,18 @@ function randomBet(array) {
     }
   }
 
-  if (clickedBet.type === 'half') {
+  if (clickedBet.type === 'divisible') {
     var even = clickedBet.value === 'even' ? 0 : 1;
     if (parseInt(results.number, 10) % 2 === even) {
+      money += 100;
+    } else {
+      money -= 100;
+    }
+  }
+
+  if (clickedBet.type === 'half') {
+    var lowNum = clickedBet.value === 'lowNum' ? 0 : 1;
+    if (parseInt(results.number, 10) <= 18 === lowNum) {
       money += 100;
     } else {
       money -= 100;
