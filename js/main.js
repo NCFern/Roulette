@@ -1,4 +1,4 @@
-var money = 1000;
+var money = 2000;
 
 var moneyBet = 100;
 
