@@ -12,7 +12,7 @@
   grid-template-rows: repeat(14, 100px);
 }
 
-.bet {
+.bet-single {
   border-left: 4px solid white;
   border-top: 4px solid white;
   color: white;

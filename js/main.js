@@ -19,142 +19,177 @@ var betTable = [
   {
     number: '2',
     color: 'black',
+    column: 'two',
   },
   {
     number: '3',
     color: 'red',
+    column: 'three',
   },
   {
     number: '4',
     color: 'black',
+    column: 'one',
   },
   {
     number: '5',
     color: 'red',
+    column: 'two',
   },
   {
     number: '6',
     color: 'black',
+    column: 'three',
   },
   {
     number: '7',
     color: 'red',
+    column: 'one',
   },
   {
     number: '8',
     color: 'black',
+    column: 'two',
   },
   {
     number: '9',
     color: 'red',
+    column: 'three',
   },
   {
     number: '10',
     color: 'black',
+    column: 'one',
   },
   {
     number: '11',
     color: 'black',
+    column: 'two',
   },
   {
     number: '12',
     color: 'red',
+    column: 'three',
   },
   {
     number: '13',
     color: 'black',
+    column: 'one',
   },
   {
     number: '14',
     color: 'red',
+    column: 'two',
   },
   {
     number: '15',
     color: 'black',
+    column: 'three',
   },
   {
     number: '16',
     color: 'red',
+    column: 'one',
   },
   {
     number: '17',
     color: 'black',
+    column: 'two',
   },
   {
     number: '18',
     color: 'red',
+    column: 'three',
   },
   {
     number: '19',
     color: 'red',
+    column: 'one',
   },
   {
     number: '20',
     color: 'black',
+    column: 'two',
   },
   {
     number: '21',
     color: 'red',
+    column: 'three',
   },
   {
     number: '22',
     color: 'black',
+    column: 'one',
   },
   {
     number: '23',
     color: 'red',
+    column: 'two',
   },
   {
     number: '24',
     color: 'black',
+    column: 'three',
   },
   {
     number: '25',
     color: 'red',
+    column: 'one',
   },
   {
     number: '26',
     color: 'black',
+    column: 'two',
   },
   {
     number: '27',
     color: 'red',
+    column: 'three',
   },
   {
     number: '28',
     color: 'black',
+    column: 'one',
   },
   {
     number: '29',
     color: 'black',
+    column: 'two',
   },
   {
     number: '30',
     color: 'red',
+    column: 'three',
   },
   {
     number: '31',
     color: 'black',
+    column: 'one',
   },
   {
     number: '32',
     color: 'red',
+    column: 'two',
   },
   {
     number: '33',
     color: 'black',
+    column: 'three',
   },
   {
     number: '34',
     color: 'red',
+    column: 'one',
   },
   {
     number: '35',
     color: 'black',
+    column: 'two',
   },
   {
     number: '36',
     color: 'red',
+    column: 'three',
   },
 ];
 
@@ -164,10 +199,10 @@ var betDisplay = document.createElement('div');
 betDisplay.setAttribute('class', 'betDisplay');
 
 var betNumber = document.createElement('h2');
-betNumber.textContent = 0;
+betNumber.textContent = 'number';
 
 var betColor = document.createElement('h2');
-betColor.textContent = 'green';
+betColor.textContent = 'color';
 
 betDisplay.appendChild(betNumber);
 betDisplay.appendChild(betColor);
