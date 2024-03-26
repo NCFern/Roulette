@@ -274,6 +274,12 @@ function randomBet(array) {
     }
   }
 
+  if (clickedBet.type === 'column') {
+    if (clickedBet.value === results.column) {
+      money += moneyBet * 3;
+    }
+  }
+
   renderMoney.innerHTML = money;
 
   clickedBet = false;
