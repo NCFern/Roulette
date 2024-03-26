@@ -2,6 +2,8 @@ var money = 2000;
 
 var moneyBet = 100;
 
+var previousBets = [];
+
 var betTable = [
   {
     number: '0',
@@ -234,6 +236,11 @@ function randomBet(array) {
   }
 
   if (clickedBet.type === 'divisible') {
+    if (results.number !== '0' || results.number !== '00') {
+      renderMoney.innerHTML = money;
+      clickedBet = false;
+      return;
+    }
     var even = clickedBet.value === 'even' ? 0 : 1;
     if (parseInt(results.number, 10) % 2 === even) {
       money += moneyBet * 2;
@@ -241,7 +248,11 @@ function randomBet(array) {
   }
 
   if (clickedBet.type === 'half') {
-    if (parseInt(results.number, 10) <= 18 && clickedBet.value === 'first') {
+    if (
+      parseInt(results.number, 10) <= 18 &&
+      clickedBet.value === 'first' &&
+      parseInt(results.number, 10) >= 1
+    ) {
       money += moneyBet * 2;
     } else if (
       parseInt(results.number, 10) > 18 &&
@@ -252,13 +263,17 @@ function randomBet(array) {
   }
 
   if (clickedBet.type === 'single') {
-    if (parseInt(results.number, 10) === parseInt(clickedBet.value)) {
+    if (results.number === clickedBet.value) {
       money += moneyBet * 36;
     }
   }
 
   if (clickedBet.type === 'dozen') {
-    if (parseInt(results.number, 10) <= 12 && clickedBet.value === 'dozen1') {
+    if (
+      parseInt(results.number, 10) <= 12 &&
+      clickedBet.value === 'dozen1' &&
+      parseInt(results.number, 10) >= 1
+    ) {
       money += moneyBet * 3;
     } else if (
       parseInt(results.number, 10) <= 24 &&
@@ -281,7 +296,8 @@ function randomBet(array) {
   }
 
   renderMoney.innerHTML = money;
-
+  previousBets.push(results);
+  console.log(previousBets);
   clickedBet = false;
 }
 
