@@ -4,6 +4,8 @@ var moneyBet = 100;
 
 var previousBets = [];
 
+var selectedBets = [];
+
 var betTable = [
   {
     number: '0',
@@ -308,6 +310,48 @@ clickBet.forEach(function (element) {
       type: element.getAttribute('data-bet'),
       value: element.getAttribute('data-value'),
     };
+    var isSelected = selectedBets.some(
+      (item) => item.value === clickedBet.value,
+    );
+
+    if (isSelected) {
+      selectedBets.splice(clickedBet);
+    } else {
+      selectedBets.push(clickedBet);
+    }
     console.log(clickedBet);
+    console.log(selectedBets);
   });
 });
+
+// var pastNumber = document.createElement('h5');
+// pastNumber.textContent = 'number';
+
+// var pastColor = document.createElement('h5');
+// pastColor.textContent = 'color';
+
+// var previousNumber = document.querySelector('.previousNumberResult');
+
+// var pastDisplay = document.createElement('div');
+// pastDisplay.setAttribute('class', 'pastDisplay');
+
+// var pastNumber = document.createElement('h5');
+// pastNumber.textContent = 'number';
+
+// var pastColor = document.createElement('h5');
+// pastColor.textContent = 'color';
+
+// pastDisplay.appendChild(pastNumber);
+// pastDisplay.appendChild(pastColor);
+
+// var showPastResult = document.querySelector('.previous-result');
+
+// var renderPastResult = pastDisplay;
+// showPastResult.appendChild(renderPastResult);
+
+// var accmulator = 0;
+// var initialValue = 0;
+
+// var multipleBets = selectedBets.reduce(
+//   (accmulator, previousBets) => accmulator + previousBets, initialValue,
+// )
