@@ -136,7 +136,7 @@
   color: white;
 }
 
-/* .chip:after {
+.chip::after {
   content: '';
   background-color: purple;
   z-index: 2;
@@ -145,4 +145,4 @@
   display: block;
   border-radius: 50%;
   position: absolute;
-} */
+}

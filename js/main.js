@@ -1,9 +1,6 @@
 var money = 2000
-
 var moneyBet = 100
-
 var previousBets = []
-
 var selectedBets = []
 
 var betTable = [
@@ -197,8 +194,6 @@ var betTable = [
   },
 ]
 
-var clickedBet
-
 var betDisplay = document.createElement('div')
 betDisplay.setAttribute('class', 'betDisplay')
 
@@ -224,9 +219,11 @@ button.addEventListener('click', function () {
   randomBet(betTable)
 })
 
+var pastResult = document.getElementById('previousResult')
+
 function randomBet(array) {
   if (!clickedBet) return
-  money -= moneyBet
+  money -= moneyBet * selectedBets.length
   var results = array[Math.floor(Math.random() * array.length)]
   betNumber.textContent = results.number
   betColor.textContent = results.color
@@ -299,8 +296,18 @@ function randomBet(array) {
 
   renderMoney.innerHTML = money
   previousBets.push(results)
+
+  var chipOff = document.querySelectorAll('.chip')
+
+  chipOff.forEach(function (element) {
+    element.classList.remove('chip')
+  })
+  var outcome = document.createElement('div')
+  outcome.textContent = results.number
+  var bg = 'bg-' + results.color
+  outcome.classList.add(bg)
+  pastResult.append(outcome)
   selectedBets = []
-  console.log('previousBets: ', previousBets)
   clickedBet = false
 }
 
@@ -312,7 +319,6 @@ clickBet.forEach(function (element) {
       value: element.getAttribute('data-value'),
     }
     var isSelected = selectedBets.some(item => item.value === clickedBet.value)
-
     if (isSelected) {
       var index = selectedBets.findIndex(
         item => item.value === clickedBet.value,
@@ -321,7 +327,6 @@ clickBet.forEach(function (element) {
     } else {
       selectedBets.push(clickedBet)
     }
-    console.log('clickedBet: ', clickedBet)
-    console.log('selectedBets: ', selectedBets)
+    var chip = this.classList.toggle('chip')
   })
 })
